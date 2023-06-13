@@ -1,2 +1,0 @@
-# skptopsis
-Aplikasi Topsis (Skripsi)

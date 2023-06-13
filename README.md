@@ -1,1 +1,2 @@
-# riski_project
+# skptopsis
+Aplikasi Topsis (Skripsi)
