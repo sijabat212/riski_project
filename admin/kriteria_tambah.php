@@ -14,7 +14,7 @@
 			<div class='container-fluid'>
 				<div class='row-fluid' id='content-wrapper'>
 					<div class='span12'>
-						
+
 					<?php include 'header.php' ?>
 						<div class='row-fluid'>
 							<div class='span12 box'>
@@ -45,7 +45,7 @@
 											<tr>
 												<td colspan=3>
 												<button class='btn btn-danger' name="simpan" type='submit'><i class='icon-save'></i> Simpan</button>
-		                    <button class='btn' onclick=self.history.back() type='button'>Batal</button>
+		                    					<button class='btn' onclick=self.history.back() type='button'>Batal</button>
 												</td>
 											</tr>
 										</table>

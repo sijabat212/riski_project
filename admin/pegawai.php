@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once "../admin/head.php";
 ?>
 <body class='contrast-red'>
@@ -8,7 +8,7 @@ include_once "../admin/head.php";
 		<div id='main-nav-bg'></div>
 		<nav class='' id="main-nav">
 			<div class='navigation'>
-				<?php 
+				<?php
 				include_once '../admin/sidebar.php';
 				?>
 			</div>
@@ -39,14 +39,14 @@ include_once "../admin/head.php";
 																<th><center>NIP</center></th>
 																<th><center>NAMA</center></th>
 																<th><center>JENIS KELAMIN</center></th>
-																<th><center>TEMPAT LAHIR</center></th>
-																<th><center>TANGGAL LAHIR</center></th>
+																<!-- <th><center>TEMPAT LAHIR</center></th>
+																<th><center>TANGGAL LAHIR</center></th> -->
 																<th><center>JABATAN</center></th>
 																<th><center>SETTING</center></th>
 															</tr>
 														</thead>
 														<tbody>
-															<?php 
+															<?php
 															$no=0;
 															$sql = mysqli_query($konek,"SELECT * FROM tbl_pegawai");
 															while ($data = mysqli_fetch_array($sql)) {
@@ -57,9 +57,9 @@ include_once "../admin/head.php";
 																<td><center><?php echo $data['nip']; ?></center></td>
 																<td><center><?php echo $data['nama_pegawai']; ?></center></td>
 																<td><center><?php echo $jenkel = ($jenkel=='L') ? 'Laki-laki' : 'Perempuan' ; ?></center></td>
-																<td><center><?php echo $data['tmp_lahir']; ?></center></td>
-																<td><center><?php echo date('d-m-Y',strtotime($data['tgl_lahir'])); ?></center></td>
-																<td><center><?php echo $data['jabatan']; ?></center></td>						
+																<!-- <td><center><?php echo $data['tmp_lahir']; ?></center></td>
+																<td><center><?php echo date('d-m-Y',strtotime($data['tgl_lahir'])); ?></center></td> -->
+																<td><center><?php echo $data['jabatan']; ?></center></td>
 																<td>
 																	<div class='text-right'>
 																		<center>
