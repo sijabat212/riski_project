@@ -1,5 +1,30 @@
-<?php 
+<?php
 include_once 'head.php';
+require "../inc/koneksi.php";
+
+if (isset($_POST['ubah'])) {
+    $id = $_POST['id_pegawai'];
+    $nip = $_POST['nip'];
+    $nama = $_POST['namapegawai'];
+    $jenkel = $_POST['jenkel'];
+    $jabatan = $_POST['jabatan'];
+
+    // Perform validation if needed
+
+    // Update the data in the database
+    $query = "UPDATE tbl_pegawai SET nip='$nip', nama_pegawai='$nama', jenkel='$jenkel', jabatan='$jabatan' WHERE id_pegawai='$id'";
+    $result = mysqli_query($konek, $query);
+
+    if ($result) {
+        // Data updated successfully
+        echo "<script>window.alert('Data pegawai berhasil diubah'); window.location.href='pegawai.php';</script>";
+    } else {
+        // Error occurred
+        echo "Error: " . mysqli_error($konek);
+    }
+}
+
+mysqli_close($konek);
 ?>
 <body class='contrast-red'>
 	<?php include_once 'navbar.php'; ?>
@@ -16,12 +41,12 @@ include_once 'head.php';
 			<div class='row-fluid' id='content-wrapper'>
 				<div class='span12'>
 					<?php include_once 'header.php'; ?>
-					
+
 					<div class='row-fluid'>
 				    <div class='span12 box'>
 			        <div class='box-content'>
 								<h3>Ubah Pegawai</h3>
-								<?php 
+								<?php
 								$id = isset($_GET['id_pegawai']) ? $_GET['id_pegawai']:'';
 								$sql = mysqli_query($konek,"SELECT * FROM tbl_pegawai WHERE id_pegawai='$id'");
 								$data = mysqli_fetch_array($sql);
@@ -34,7 +59,7 @@ include_once 'head.php';
 										<td>NIP</td>
 										<td> : </td>
 										<td><input type=text name='nip' placeholder='nip' value="<?=$data['nip'];?>"></td>
-									</tr>			
+									</tr>
 									<tr>
 										<td>NAMA</td>
 										<td> : </td>
@@ -50,23 +75,6 @@ include_once 'head.php';
 											</select>
 										</td>
 									</tr>
-	                <tr>
-	                    <td>TEMPAT LAHIR</td>
-	                    <td>:</td>
-	                    <td><input type=text name='tmp_lahir' placeholder='tempat lahir' value="<?=$data['tmp_lahir']?>"></td>
-	                </tr>
-	                <tr>
-	                    <td>TANGGAL LAHIR</td>
-	                    <td>:</td>
-	                    <td>
-	                    <div class='datepicker input-append' id='datepicker'>
-	                        <input class='input-medium' data-format='dd-MM-yyyy' placeholder='Tanggal Lahir' type=text name='tgl_lahir' value="<?=$data['tgl_lahir'] ?>" />
-	                        <span class='add-on'>
-	                            <i data-date-icon='icon-calendar' data-time-icon='icon-time'></i>
-	                        </span>
-	                    </div>
-	                    </td>
-	                </tr>
 	                <tr>
 	                    <td>JABATAN</td>
 	                    <td>:</td>

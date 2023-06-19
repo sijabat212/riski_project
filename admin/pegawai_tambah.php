@@ -1,5 +1,30 @@
 <?php
+require "../inc/koneksi.php";
 include_once 'head.php';
+if (isset($_POST['simpan'])) {
+    $nip = $_POST['nip'];
+    $nama_pegawai = $_POST['nama_pegawai'];
+    $jenkel = $_POST['jenkel'];
+    $jabatan = $_POST['jabatan'];
+
+    // Perform validation if needed
+
+    // Insert data into the database
+    $query = "INSERT INTO tbl_pegawai (nip, nama_pegawai, jenkel, jabatan) VALUES ('$nip', '$nama_pegawai', '$jenkel', '$jabatan')";
+    $result = mysqli_query($konek, $query);
+
+    if ($result) {
+        // Data inserted successfully
+        echo "Data added successfully.";
+    } else {
+        // Error occurred
+        echo "Error: " . mysqli_error($konek);
+    }
+}
+
+mysqli_close($konek);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 ?>
 <body class='contrast-red'>
 	<?php include_once 'navbar.php'; ?>
@@ -26,7 +51,7 @@ include_once 'head.php';
 									<tr>
 										<td>NIP</td>
 										<td> : </td>
-										<td><input type=text name='nip' placeholder='nip' required></td>
+										<td><input type=text name='nip' placeholder='nip' ></td>
 									</tr>
 									<tr>
 										<td>NAMA</td>
