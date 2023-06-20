@@ -23,7 +23,7 @@
     ?>
 
       <form action="check_in.php" method="POST" class="form-signin">
-        <h2 class="form-signin-heading"><strong>KANTOR BPS</strong><br>PROV. JAWA TIMUR</h2>
+        <h2 class="form-signin-heading"><strong>Kantor Kecamatan<br>Siantar Sitalasari</h2></strong>
         <label class="sr-only">Email address</label>
         <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
         <label class="sr-only">Password</label>

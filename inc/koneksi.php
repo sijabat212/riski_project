@@ -1,5 +1,5 @@
 <?php
-$konek = mysqli_connect("localhost","root","","pegawai");
+$konek = mysqli_connect("localhost","root","riskiucup123","pegawai");
 
 // if (!$konek) {
 //     echo "Error: Unable to connect to MySQL." . PHP_EOL;

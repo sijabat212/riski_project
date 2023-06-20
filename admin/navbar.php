@@ -2,7 +2,7 @@
 		<div class='navbar'>
 			<div class='navbar-inner'>
 				<div class='container-fluid'>
-					<a class='brand' href='#'><span class='hidden-phone'>Kantor Badan Pusat Statistik Prov. Jawa Timur</span></a>
+					<a class='brand' href='#'><span class='hidden-phone'>Kantor Kecamatan Siantar Sitalasari </span></a>
 					<a class='toggle-nav btn pull-left' href='#'><i class='icon-reorder'></i></a>
 					<ul class='nav pull-right'>
 						<li class='dropdown dark user-menu'>

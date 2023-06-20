@@ -3,7 +3,7 @@
 		<div class='page-header'>
 			<h1 class='pull-left'>
 				<img src="../assets/images/LogoBPS.jpg" width="50" height="50">
-				<span>Pemilihan Pegawai Teladan (TOPSIS)</span>
+				<span>Pemilihan Pegawai Terbaik (TOPSIS)</span>
 			</h1>
 			<div class='pull-right'>
 				<ul class='breadcrumb'>
